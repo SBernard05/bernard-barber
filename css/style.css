@@ -1402,3 +1402,38 @@ footer p:first-child {
         font-size: 32px;
     }
 }
+
+/* Fix reservation form on mobile */
+
+.booking-form,
+.booking-form-container,
+.booking-form .form-row,
+.booking-form .form-group {
+    min-width: 0;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .booking-form .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .booking-form input[type="date"] {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+}
