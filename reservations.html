@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,16 +10,18 @@
 
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header>
-
         <div class="logo">
             <a href="index.html">
-            <img src="img/logo.png" alt="Bernard Barber Logo">
+                <img src="img/logo.png" alt="Bernard Barber Logo">
             </a>
         </div>
 
@@ -28,9 +31,7 @@
             <a href="gallery.html">Gallery</a>
             <a href="reservations.html">Reservations</a>
         </nav>
-
     </header>
-
 
     <main>
 
@@ -42,12 +43,11 @@
             <h2>Reservations</h2>
 
             <p>
-                Choose your service, barber and preferred time.
+                Choose your service and preferred time.
                 We look forward to seeing you.
             </p>
 
         </section>
-
 
         <!-- BOOKING SECTION -->
         <section class="booking-section">
@@ -66,7 +66,6 @@
                         that suits you best.
                     </p>
 
-
                     <div class="info-item">
                         <h3>Opening Hours</h3>
 
@@ -80,13 +79,10 @@
                         <strong>10:00 – 14:00</strong>
                     </div>
 
-
                     <div class="info-item">
                         <h3>Location</h3>
-
                         <p>Jeneč, Czech Republic</p>
                     </div>
-
 
                     <div class="info-item">
                         <h3>Contact</h3>
@@ -97,7 +93,6 @@
 
                 </div>
 
-
                 <!-- RIGHT SIDE - FORM -->
                 <div class="booking-form-container">
 
@@ -106,29 +101,26 @@
                         <!-- NAME -->
                         <div class="form-group">
 
-                            <label for="name">
-                                Full Name *
-                            </label>
+                            <label for="name">Full Name *</label>
 
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
                                 placeholder="Your name"
+                                minlength="2"
+                                maxlength="100"
                                 required
                             >
 
                         </div>
-
 
                         <!-- PHONE + EMAIL -->
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="phone">
-                                    Phone *
-                                </label>
+                                <label for="phone">Phone *</label>
 
                                 <input
                                     type="tel"
@@ -140,12 +132,9 @@
 
                             </div>
 
-
                             <div class="form-group">
 
-                                <label for="email">
-                                    Email *
-                                </label>
+                                <label for="email">Email *</label>
 
                                 <input
                                     type="email"
@@ -159,19 +148,12 @@
 
                         </div>
 
-
                         <!-- SERVICE -->
                         <div class="form-group">
 
-                            <label for="service">
-                                Service *
-                            </label>
+                            <label for="service">Service *</label>
 
-                            <select
-                                id="service"
-                                name="service"
-                                required
-                            >
+                            <select id="service" name="service" required>
 
                                 <option value="" disabled selected>
                                     Select a service
@@ -186,22 +168,19 @@
                                 </option>
 
                                 <option value="hair-beard">
-                                    Hair & Beard – 650 CZK
+                                    Hair &amp; Beard – 650 CZK
                                 </option>
 
                             </select>
 
                         </div>
 
-
                         <!-- DATE + TIME -->
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="date">
-                                    Date *
-                                </label>
+                                <label for="date">Date *</label>
 
                                 <input
                                     type="date"
@@ -212,38 +191,42 @@
 
                             </div>
 
-
                             <div class="form-group">
 
-                                <label for="time">
-                                    Time *
-                                </label>
+                                <label for="time">Time *</label>
 
-                                <select id="time" name="time" required disabled>
-    <option value="">First select a date</option>
-</select>
+                                <select
+                                    id="time"
+                                    name="time"
+                                    required
+                                    disabled
+                                >
+                                    <option value="">
+                                        First select a date
+                                    </option>
+                                </select>
 
                             </div>
 
                         </div>
 
-
                         <!-- NOTE -->
                         <div class="form-group">
 
-                            <label for="note">
-                                Note
-                            </label>
+                            <label for="note">Note</label>
 
                             <textarea
                                 id="note"
                                 name="note"
                                 rows="5"
+                                maxlength="1000"
                                 placeholder="Anything we should know?"
                             ></textarea>
 
                         </div>
 
+                        <!-- Invisible Cloudflare Turnstile -->
+                        <div id="turnstile-container"></div>
 
                         <!-- SUBMIT -->
                         <button
@@ -252,6 +235,12 @@
                         >
                             Book Appointment
                         </button>
+
+                        <p
+                            id="booking-message"
+                            role="status"
+                            aria-live="polite"
+                        ></p>
 
                     </form>
 
@@ -262,7 +251,6 @@
         </section>
 
     </main>
-
 
     <!-- FOOTER -->
     <footer>
@@ -275,8 +263,7 @@
 
     </footer>
 
-    <script src=".\js\script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
-
 </html>
