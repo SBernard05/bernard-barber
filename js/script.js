@@ -361,10 +361,15 @@ bookingForm.addEventListener("submit", async (event) => {
 
         // Successful booking
         showToast(
-    "success",
-    "Booking successful!",
-    "Your appointment has been confirmed."
-);
+            "success",
+            "Booking successful!",
+            "Your appointment has been confirmed."
+        );
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
         bookingForm.reset();
 
