@@ -344,26 +344,26 @@ bookingForm.addEventListener("submit", async (event) => {
         if (!response.ok || !result.success) {
             if (response.status === 409) {
                 throw new Error(
-                    "This time is already booked. Please choose another."
+                    "Tento čas už je obsazen. Prosím vyberte jiný čas."
                 );
             }
 
             if (response.status === 403) {
                 throw new Error(
-                    "Security verification failed. Please try again."
+                    "Sekuritní ověření selhalo. Prosím, zkuste to znovu."
                 );
             }
 
             throw new Error(
-                result.error || "Booking failed. Please try again."
+                result.error || "Rezervace se nezdařila. Prosím, zkuste to znovu."
             );
         }
 
         // Successful booking
         showToast(
             "success",
-            "Booking successful!",
-            "Your appointment has been confirmed."
+            "Úspěšná rezervace!",
+            "Vaše rezervace byla úspěšně vytvořena."
         );
 
         requestAnimationFrame(() => {
@@ -381,15 +381,15 @@ bookingForm.addEventListener("submit", async (event) => {
 
         timeSelect.disabled = true;
         timeSelect.innerHTML =
-            '<option value="">First select a date</option>';
+            '<option value="">Nejprve vyberte den</option>';
 
     } catch (error) {
         console.error("Booking error:", error);
 
         showToast(
     "error",
-    "Booking failed!",
-    error.message || "Please try again."
+    "Rezervace se nezdařila!",
+    error.message || "Prosím, zkuste to znovu."
 );
 
     } finally {
@@ -397,6 +397,6 @@ bookingForm.addEventListener("submit", async (event) => {
 
         isBooking = false;
         bookingButton.disabled = false;
-        bookingButton.textContent = "Book Appointment";
+        bookingButton.textContent = "Rezervovat";
     }
 });
