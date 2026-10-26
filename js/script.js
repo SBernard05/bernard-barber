@@ -370,7 +370,7 @@ bookingForm.addEventListener("submit", async (event) => {
   window.scrollTo({
     top: 0,
     left: 0,
-    behavior: "instant"
+    behavior: "smooth"
   });
 
   document.documentElement.scrollTop = 0;
