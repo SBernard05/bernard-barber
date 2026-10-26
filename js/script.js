@@ -5,7 +5,7 @@ const SUPABASE_URL =
 // Replace with your PUBLIC Cloudflare Site Key.
 // Never put the Secret Key here.
 const TURNSTILE_SITE_KEY =
-    "PASTE_YOUR_TURNSTILE_SITE_KEY_HERE";
+    "0x4AAAAAAFmV_ScnKFpbRsGC";
 
 const dateInput = document.getElementById("date");
 const timeSelect = document.getElementById("time");
@@ -160,11 +160,11 @@ async function initializeTurnstile() {
     await waitForTurnstile();
 
     if (
-        TURNSTILE_SITE_KEY ===
-        "0x4AAAAAAFmV_ScnKFpbRsGC"
-    ) {
-        throw new Error("Cloudflare Site Key is not configured.");
-    }
+    TURNSTILE_SITE_KEY ===
+    "PASTE_YOUR_TURNSTILE_SITE_KEY_HERE"
+) {
+    throw new Error("Cloudflare Site Key is not configured.");
+}
 
     turnstileWidgetId = window.turnstile.render(
         "#turnstile-container",
