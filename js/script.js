@@ -2,8 +2,6 @@
 const SUPABASE_URL =
     "https://chwgszwodpbphnzlrmvg.supabase.co";
 
-// Replace with your PUBLIC Cloudflare Site Key.
-// Never put the Secret Key here.
 const TURNSTILE_SITE_KEY =
     "0x4AAAAAAFmV_ScnKFpbRsGC";
 
@@ -13,7 +11,49 @@ const bookingForm = document.querySelector(".booking-form");
 const bookingButton = bookingForm.querySelector(
     'button[type="submit"]'
 );
-const bookingMessage = document.getElementById("booking-message");
+// --------------------------------------
+// TOAST NOTIFICATIONS
+// --------------------------------------
+
+function showToast(type, title, message) {
+    const container = document.getElementById("toast-container");
+
+    const toast = document.createElement("div");
+    toast.className = `toast toast-${type}`;
+    toast.setAttribute("role", type === "error" ? "alert" : "status");
+
+    const icon = document.createElement("span");
+    icon.className = "toast-icon";
+    icon.textContent = type === "success" ? "✓" : "!";
+
+    const content = document.createElement("div");
+    content.className = "toast-content";
+
+    const heading = document.createElement("strong");
+    heading.textContent = title;
+
+    const description = document.createElement("span");
+    description.textContent = message;
+
+    content.append(heading, description);
+
+    const closeButton = document.createElement("button");
+    closeButton.type = "button";
+    closeButton.className = "toast-close";
+    closeButton.textContent = "×";
+    closeButton.setAttribute("aria-label", "Close notification");
+
+    const closeToast = () => {
+        toast.remove();
+    };
+
+    closeButton.addEventListener("click", closeToast);
+
+    toast.append(icon, content, closeButton);
+    container.appendChild(toast);
+
+    setTimeout(closeToast, 5000);
+}
 
 const serviceIds = {
     haircut: 1,
@@ -266,7 +306,7 @@ bookingForm.addEventListener("submit", async (event) => {
     isBooking = true;
     bookingButton.disabled = true;
     bookingButton.textContent = "Booking...";
-    bookingMessage.textContent = "";
+    
 
     try {
         // Verify the visitor before creating a booking.
@@ -320,8 +360,11 @@ bookingForm.addEventListener("submit", async (event) => {
         }
 
         // Successful booking
-        bookingMessage.textContent =
-            "Your appointment has been booked successfully!";
+        showToast(
+    "success",
+    "Booking successful!",
+    "Your appointment has been confirmed."
+);
 
         bookingForm.reset();
 
@@ -332,8 +375,11 @@ bookingForm.addEventListener("submit", async (event) => {
     } catch (error) {
         console.error("Booking error:", error);
 
-        bookingMessage.textContent =
-            error.message || "Booking failed. Please try again.";
+        showToast(
+    "error",
+    "Booking failed!",
+    error.message || "Please try again."
+);
 
     } finally {
         resetTurnstile();
