@@ -1,12 +1,8 @@
-/* ==================================================
-   BERNARD BARBER - MAIN STYLESHEET
-   Used for: index.html + about.html
-================================================== */
-
-
-/* =========================
-   BASIC SETTINGS
-========================= */
+/* BERNARD BARBER | Unified stylesheet
+   Consolidated from the supplied style.css.
+   Shared styles + homepage + about + gallery + reservations.
+   Edit each selector in one place; keep this file at css/style.css.
+*/
 
 * {
     margin: 0;
@@ -29,21 +25,13 @@ main {
     overflow: hidden;
 }
 
-
-/* =========================
-   HEADER
-========================= */
-
 header {
     min-height: 90px;
     padding: 0 8%;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     background-color: #081525;
-
     border-bottom: 1px solid #17304d;
 }
 
@@ -64,11 +52,6 @@ header {
     display: block;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
 nav {
     display: flex;
     align-items: center;
@@ -77,16 +60,12 @@ nav {
 
 nav a {
     position: relative;
-
     color: #ffffff;
     text-decoration: none;
-
     font-size: 14px;
     font-weight: 600;
-
     text-transform: uppercase;
     letter-spacing: 1px;
-
     transition: color 0.3s ease;
 }
 
@@ -94,20 +73,14 @@ nav a:hover {
     color: #55b8ff;
 }
 
-/* Line under navigation item */
-
 nav a::after {
     content: "";
-
     position: absolute;
     left: 0;
     bottom: -8px;
-
     width: 0;
     height: 2px;
-
     background-color: #55b8ff;
-
     transition: width 0.3s ease;
 }
 
@@ -115,66 +88,37 @@ nav a:hover::after {
     width: 100%;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
 .button {
     display: inline-block;
-
     padding: 15px 35px;
-
     background-color: #55b8ff;
     color: #06101c;
-
     text-decoration: none;
     text-transform: uppercase;
-
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
-
     border-radius: 6px;
-
-    transition:
-        background-color 0.3s ease,
+    transition: background-color 0.3s ease,
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 .button:hover {
     background-color: #8bd0ff;
-
     transform: translateY(-3px);
-
     box-shadow: 0 10px 30px rgba(85, 184, 255, 0.2);
 }
 
-
-/* ==================================================
-   HOMEPAGE
-================================================== */
-
-
-/* =========================
-   HERO
-========================= */
-
 .hero {
     min-height: 85vh;
-
     padding: 60px 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        radial-gradient(
+    background: radial-gradient(
             circle at center,
             rgba(32, 94, 145, 0.25),
             transparent 55%
@@ -188,44 +132,29 @@ nav a:hover::after {
 
 .hero h2 {
     max-width: 900px;
-
     font-size: 72px;
     line-height: 1.05;
-
     text-transform: uppercase;
     letter-spacing: 5px;
-
     margin-bottom: 25px;
 }
 
 .hero p {
     max-width: 620px;
-
     margin-bottom: 35px;
-
     color: #a9bfd3;
-
     font-size: 18px;
 }
 
-
-/* =========================
-   SERVICES
-========================= */
-
 .services {
     padding: 110px 8%;
-
     background-color: #0b192b;
-
     text-align: center;
 }
 
 .services > h2 {
     margin-bottom: 60px;
-
     font-size: 42px;
-
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -233,93 +162,69 @@ nav a:hover::after {
 .service-container {
     max-width: 1200px;
     margin: auto;
-
     display: flex;
     justify-content: center;
-
     gap: 30px;
 }
 
 .service {
     flex: 1;
-
     padding: 50px 30px;
-
     background: linear-gradient(
         145deg,
         #10233a,
         #0d1e32
     );
-
     border: 1px solid #1b3a5c;
     border-radius: 12px;
-
-    transition:
-        transform 0.3s ease,
+    transition: transform 0.3s ease,
         border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 .service:hover {
     transform: translateY(-10px);
-
     border-color: #55b8ff;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .service h3 {
     margin-bottom: 15px;
-
     font-size: 24px;
 }
 
 .service p {
     margin-bottom: 20px;
-
     color: #a9bfd3;
 }
 
 .service strong {
     color: #55b8ff;
-
     font-size: 21px;
 }
-
-
-/* =========================
-   ABOUT PREVIEW - HOMEPAGE
-========================= */
 
 .about-preview {
     max-width: 850px;
     margin: auto;
-
     padding: 120px 30px;
-
     text-align: center;
 }
 
 .about-preview h2 {
     margin-bottom: 25px;
-
     font-size: 44px;
 }
 
 .about-preview p {
     margin-bottom: 25px;
-
     color: #a9bfd3;
-
     font-size: 18px;
 }
 
 .about-preview a {
     color: #55b8ff;
-
     text-decoration: none;
     font-weight: bold;
-
     transition: color 0.3s ease;
 }
 
@@ -327,30 +232,20 @@ nav a:hover::after {
     color: #8bd0ff;
 }
 
-
-/* =========================
-   RESERVATION CTA
-========================= */
-
 .reservation {
     padding: 100px 20px;
-
     text-align: center;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             135deg,
             #10233a,
             #0b192b
         );
-
     border-top: 1px solid #17304d;
     border-bottom: 1px solid #17304d;
 }
 
 .reservation h2 {
     margin-bottom: 10px;
-
     font-size: 44px;
 }
 
@@ -358,34 +253,18 @@ nav a:hover::after {
     margin-bottom: 30px;
     width: 100%;
     color: #a9bfd3;
-
     font-size: 17px;
 }
 
-
-/* ==================================================
-   ABOUT PAGE
-================================================== */
-
-
-/* =========================
-   ABOUT HERO
-========================= */
-
 .about-hero {
     min-height: 430px;
-
     padding: 80px 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        radial-gradient(
+    background: radial-gradient(
             circle at center,
             rgba(50, 126, 184, 0.25),
             transparent 55%
@@ -399,54 +278,33 @@ nav a:hover::after {
 
 .about-hero h2 {
     margin-bottom: 20px;
-
     font-size: 64px;
-
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 .about-hero p {
     max-width: 650px;
-
     color: #a9bfd3;
-
     font-size: 18px;
 }
 
-
-/* =========================
-   SECTION LABEL
-========================= */
-
 .section-label {
     margin-bottom: 10px;
-
     color: #55b8ff;
-
     text-transform: uppercase;
-
     font-size: 14px;
     font-weight: bold;
-
     letter-spacing: 3px;
 }
-
-
-/* =========================
-   OUR STORY
-========================= */
 
 .our-story {
     max-width: 1150px;
     margin: auto;
-
     padding: 110px 30px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 90px;
 }
 
@@ -456,110 +314,79 @@ nav a:hover::after {
 
 .story-text h2 {
     margin-bottom: 25px;
-
     font-size: 42px;
     line-height: 1.2;
 }
 
 .story-text p:not(.section-label) {
     margin-bottom: 20px;
-
     color: #a9bfd3;
-
     font-size: 17px;
 }
 
 .story-box {
     width: 320px;
     height: 320px;
-
     flex-shrink: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             145deg,
             #122a46,
             #0d1d31
         );
-
     border: 1px solid #25527a;
     border-radius: 15px;
-
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
 
 .story-box span {
     color: #a9bfd3;
-
     font-size: 14px;
-
     letter-spacing: 4px;
 }
 
 .story-box strong {
     margin: 5px 0;
-
     color: #55b8ff;
-
     font-size: 68px;
     line-height: 1.2;
 }
 
 .story-box p {
     color: #ffffff;
-
     font-size: 13px;
-
     letter-spacing: 6px;
 }
 
-
-/* =========================
-   WHY CHOOSE US
-========================= */
-
 .why-us {
     padding: 110px 8%;
-
     background-color: #0b192b;
-
     text-align: center;
 }
 
 .why-us > h2 {
     margin-bottom: 60px;
-
     font-size: 42px;
 }
 
 .why-container {
     max-width: 1150px;
     margin: auto;
-
     display: flex;
-
     gap: 30px;
 }
-
 
 .why-card {
     flex: 1;
     padding: 50px 30px;
-
     background: #10233a;
-
     border: 1px solid rgba(85, 184, 255, 0.15);
     border-radius: 18px;
-
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-
-    transition:
-        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
         border-color 0.5s ease,
         box-shadow 0.6s ease,
         background-color 0.5s ease;
@@ -567,25 +394,17 @@ nav a:hover::after {
 
 .why-card:hover {
     transform: translateY(-8px);
-
     background: #163453;
-
     border-color: rgba(85, 184, 255, 0.65);
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.25),
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25),
         0 0 30px rgba(85, 184, 255, 0.12);
 }
-
-/* Jemná animace ikony */
 
 .why-card span {
     display: block;
     color: #55b8ff;
     font-size: 38px;
-
-    transition:
-        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
         color 0.5s ease;
 }
 
@@ -594,10 +413,8 @@ nav a:hover::after {
     color: #8bd0ff;
 }
 
-
 .why-card h3 {
     margin: 20px 0 10px;
-
     font-size: 21px;
 }
 
@@ -605,35 +422,27 @@ nav a:hover::after {
     color: #a9bfd3;
 }
 
-
-/* =========================
-   TEAM
-========================= */
-
 .team {
     padding: 110px 8%;
-
     text-align: center;
 }
 
 .team > h2 {
     margin-bottom: 55px;
-
     font-size: 42px;
 }
 
 .team-container {
     display: flex;
     justify-content: center;
-
     gap: 40px;
 }
 
 .barber-card {
     width: 310px;
-
     padding-bottom: 20px;
 }
+
 .barber-photo {
     width: 100%;
     max-width: 350px;
@@ -641,7 +450,6 @@ nav a:hover::after {
     margin: 0 auto;
     border-radius: 24px;
     overflow: hidden;
-
     border: 1px solid rgba(70, 150, 255, 0.3);
     box-shadow: 0 15px 45px rgba(0, 100, 255, 0.15);
 }
@@ -664,22 +472,13 @@ nav a:hover::after {
         max-width: 280px;
         height: 340px;
     }
+
 }
-
-
-/* =========================
-   FOOTER
-========================= */
-
 footer {
     padding: 55px 20px;
-
     text-align: center;
-
     background-color: #040b14;
-
     color: #71879b;
-
     border-top: 1px solid #17304d;
 }
 
@@ -689,41 +488,26 @@ footer p {
 
 footer p:first-child {
     color: #55b8ff;
-
     font-weight: bold;
-
     text-transform: uppercase;
-
     letter-spacing: 2px;
 }
 
-
-/* ==================================================
-   TABLET + MOBILE
-================================================== */
-
 @media (max-width: 768px) {
-
-    /* HEADER */
-
     header {
         padding: 22px 20px;
-
         flex-direction: column;
-
         gap: 20px;
     }
 
     .logo h1 {
         text-align: center;
-
         font-size: 21px;
     }
 
     nav {
         justify-content: center;
         flex-wrap: wrap;
-
         gap: 15px 20px;
     }
 
@@ -731,25 +515,18 @@ footer p:first-child {
         font-size: 12px;
     }
 
-
-    /* HOMEPAGE HERO */
-
     .hero {
         min-height: 70vh;
     }
 
     .hero h2 {
         font-size: 44px;
-
         letter-spacing: 3px;
     }
 
     .hero p {
         font-size: 16px;
     }
-
-
-    /* SERVICES */
 
     .services {
         padding: 80px 20px;
@@ -759,15 +536,9 @@ footer p:first-child {
         flex-direction: column;
     }
 
-
-    /* ABOUT PREVIEW */
-
     .about-preview {
         padding: 80px 25px;
     }
-
-
-    /* ABOUT HERO */
 
     .about-hero {
         min-height: 350px;
@@ -775,20 +546,13 @@ footer p:first-child {
 
     .about-hero h2 {
         font-size: 44px;
-
         letter-spacing: 3px;
     }
 
-
-    /* OUR STORY */
-
     .our-story {
         padding: 80px 25px;
-
         flex-direction: column;
-
         gap: 50px;
-
         text-align: center;
     }
 
@@ -797,9 +561,6 @@ footer p:first-child {
         max-width: 320px;
     }
 
-
-    /* WHY US */
-
     .why-us {
         padding: 80px 20px;
     }
@@ -807,9 +568,6 @@ footer p:first-child {
     .why-container {
         flex-direction: column;
     }
-
-
-    /* TEAM */
 
     .team {
         padding: 80px 20px;
@@ -820,9 +578,6 @@ footer p:first-child {
         align-items: center;
     }
 
-
-    /* HEADINGS */
-
     .services > h2,
     .about-preview h2,
     .reservation h2,
@@ -831,15 +586,9 @@ footer p:first-child {
     .team > h2 {
         font-size: 32px;
     }
+
 }
-
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 480px) {
-
     .hero h2 {
         font-size: 36px;
     }
@@ -850,7 +599,6 @@ footer p:first-child {
 
     .button {
         padding: 13px 25px;
-
         font-size: 12px;
     }
 
@@ -865,31 +613,17 @@ footer p:first-child {
     .barber-card {
         width: 100%;
     }
+
 }
-
-/* ==================================================
-   GALLERY PAGE
-================================================== */
-
-
-/* =========================
-   GALLERY HERO
-========================= */
-
 .gallery-hero {
     min-height: 430px;
-
     padding: 80px 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        radial-gradient(
+    background: radial-gradient(
             circle at center,
             rgba(50, 126, 184, 0.25),
             transparent 55%
@@ -903,47 +637,29 @@ footer p:first-child {
 
 .gallery-hero h2 {
     margin-bottom: 20px;
-
     font-size: 64px;
-
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 .gallery-hero > p:last-child {
     max-width: 650px;
-
     color: #a9bfd3;
-
     font-size: 18px;
 }
 
-
-/* =========================
-   GALLERY GRID
-========================= */
-
 .gallery-section {
     padding: 110px 8%;
-
     background-color: #0b192b;
 }
 
 .gallery-grid {
     max-width: 1200px;
     margin: auto;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 35px;
 }
-
-
-/* =========================
-   GALLERY ITEM
-========================= */
 
 .gallery-item {
     transition: transform 0.3s ease;
@@ -955,82 +671,55 @@ footer p:first-child {
 
 .gallery-placeholder {
     height: 350px;
-
     margin-bottom: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             145deg,
             #122a46,
             #0d1d31
         );
-
     border: 1px solid #1b3a5c;
     border-radius: 12px;
-
     color: #55b8ff;
-
     font-size: 15px;
     font-weight: bold;
-
     letter-spacing: 3px;
-
-    transition:
-        border-color 0.3s ease,
+    transition: border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 .gallery-item:hover .gallery-placeholder {
     border-color: #55b8ff;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .gallery-item h3 {
     font-size: 21px;
-
     margin-bottom: 3px;
 }
 
 .gallery-item p {
     color: #55b8ff;
-
     font-size: 14px;
-
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-
-/* =========================
-   GALLERY TABLET
-========================= */
-
 @media (max-width: 900px) {
-
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
-
-
-/* =========================
-   GALLERY MOBILE
-========================= */
-
 @media (max-width: 600px) {
-
     .gallery-hero {
         min-height: 350px;
     }
 
     .gallery-hero h2 {
         font-size: 42px;
-
         letter-spacing: 3px;
     }
 
@@ -1045,31 +734,17 @@ footer p:first-child {
     .gallery-placeholder {
         height: 380px;
     }
+
 }
-
-/* ==================================================
-   RESERVATIONS PAGE
-================================================== */
-
-
-/* =========================
-   RESERVATION HERO
-========================= */
-
 .reservation-hero {
     min-height: 430px;
-
     padding: 80px 20px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
-    background:
-        radial-gradient(
+    background: radial-gradient(
             circle at center,
             rgba(50, 126, 184, 0.25),
             transparent 55%
@@ -1083,60 +758,39 @@ footer p:first-child {
 
 .reservation-hero h2 {
     margin-bottom: 20px;
-
     font-size: 64px;
-
     text-transform: uppercase;
     letter-spacing: 5px;
 }
 
 .reservation-hero > p:last-child {
     max-width: 650px;
-
     color: #a9bfd3;
-
     font-size: 18px;
 }
 
-
-/* =========================
-   BOOKING SECTION
-========================= */
-
 .booking-section {
     padding: 110px 8%;
-
     background-color: #0b192b;
 }
 
 .booking-container {
     max-width: 1150px;
     margin: auto;
-
     display: grid;
-
     grid-template-columns: 1fr 1.5fr;
-
     gap: 80px;
 }
 
-
-/* =========================
-   BOOKING INFORMATION
-========================= */
-
 .booking-info h2 {
     margin-bottom: 20px;
-
     font-size: 42px;
     line-height: 1.2;
 }
 
 .booking-description {
     margin-bottom: 45px;
-
     color: #a9bfd3;
-
     font-size: 17px;
 }
 
@@ -1146,50 +800,31 @@ footer p:first-child {
 
 .info-item h3 {
     margin-bottom: 10px;
-
     color: #ffffff;
-
     font-size: 18px;
 }
 
 .info-item p {
     color: #a9bfd3;
-
     margin-top: 8px;
 }
 
 .info-item strong {
     color: #55b8ff;
-
     font-size: 15px;
 }
 
-
-/* =========================
-   BOOKING FORM CONTAINER
-========================= */
-
 .booking-form-container {
     padding: 45px;
-
-    background:
-        linear-gradient(
+    background: linear-gradient(
             145deg,
             #10233a,
             #0d1e32
         );
-
     border: 1px solid #1b3a5c;
-
     border-radius: 15px;
-
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
 }
-
-
-/* =========================
-   FORM
-========================= */
 
 .booking-form {
     width: 100%;
@@ -1197,13 +832,11 @@ footer p:first-child {
 
 .form-group {
     width: 100%;
-
     margin-bottom: 25px;
 }
 
 .form-row {
     display: flex;
-
     gap: 20px;
 }
 
@@ -1211,74 +844,44 @@ footer p:first-child {
     flex: 1;
 }
 
-
-/* LABELS */
-
 .form-group label {
     display: block;
-
     margin-bottom: 8px;
-
     color: #d9e7f3;
-
     font-size: 14px;
     font-weight: bold;
-
     letter-spacing: 0.5px;
 }
-
-
-/* INPUTS */
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     width: 100%;
-
     padding: 15px 16px;
-
     background-color: #081525;
-
     color: #ffffff;
-
     border: 1px solid #254765;
-
     border-radius: 7px;
-
     outline: none;
-
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
-
-    transition:
-        border-color 0.3s ease,
+    transition: border-color 0.3s ease,
         box-shadow 0.3s ease,
         background-color 0.3s ease;
 }
-
-
-/* PLACEHOLDER */
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
     color: #647d92;
 }
 
-
-/* INPUT FOCUS */
-
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     background-color: #0a192a;
-
     border-color: #55b8ff;
-
     box-shadow: 0 0 0 3px rgba(85, 184, 255, 0.1);
 }
-
-
-/* SELECT */
 
 .form-group select {
     cursor: pointer;
@@ -1286,99 +889,61 @@ footer p:first-child {
 
 .form-group select option {
     background-color: #081525;
-
     color: #ffffff;
 }
 
-
-/* TEXTAREA */
-
 .form-group textarea {
     resize: vertical;
-
     min-height: 120px;
 }
-
-
-/* DATE + TIME ICON */
 
 .form-group input[type="date"],
 .form-group input[type="time"] {
     color-scheme: dark;
 }
 
-
-/* =========================
-   BOOKING BUTTON
-========================= */
-
 .booking-button {
     width: 100%;
-
     padding: 17px;
-
     margin-top: 5px;
-
     background-color: #55b8ff;
     color: #06101c;
-
     border: none;
     border-radius: 7px;
-
     font-size: 14px;
     font-weight: bold;
-
     text-transform: uppercase;
     letter-spacing: 1px;
-
     cursor: pointer;
-
-    transition:
-        background-color 0.3s ease,
+    transition: background-color 0.3s ease,
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
 .booking-button:hover {
     background-color: #8bd0ff;
-
     transform: translateY(-3px);
-
     box-shadow: 0 10px 30px rgba(85, 184, 255, 0.2);
 }
 
-
-/* =========================
-   RESERVATION TABLET
-========================= */
-
 @media (max-width: 900px) {
-
     .booking-container {
         grid-template-columns: 1fr;
-
         gap: 50px;
     }
 
     .booking-info {
         text-align: center;
     }
+
 }
-
-
-/* =========================
-   RESERVATION MOBILE
-========================= */
-
 @media (max-width: 600px) {
-
     .reservation-hero {
         min-height: 350px;
     }
 
     .reservation-hero h2 {
         font-size: 38px;
-
         letter-spacing: 3px;
     }
 
@@ -1392,17 +957,14 @@ footer p:first-child {
 
     .form-row {
         flex-direction: column;
-
         gap: 0;
     }
 
     .booking-info h2 {
         font-size: 32px;
     }
+
 }
-
-/* Fix reservation form on mobile */
-
 .booking-form,
 .booking-form-container,
 .booking-form .form-row,
@@ -1434,20 +996,16 @@ footer p:first-child {
         -webkit-appearance: none;
         appearance: none;
     }
+
 }
-
-/* TOAST NOTIFICATIONS */
-
 #toast-container {
     position: fixed;
     top: 25px;
     right: 25px;
     z-index: 9999;
-
     display: flex;
     flex-direction: column;
     gap: 12px;
-
     width: min(380px, calc(100% - 32px));
     pointer-events: none;
 }
@@ -1456,16 +1014,12 @@ footer p:first-child {
     display: flex;
     align-items: center;
     gap: 14px;
-
     padding: 18px 20px;
     border-radius: 12px;
-
     color: white;
     font-size: 14px;
     line-height: 1.5;
-
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-
     animation: toast-in 0.3s ease;
     pointer-events: auto;
 }
@@ -1518,142 +1072,271 @@ footer p:first-child {
         top: 15px;
         right: 16px;
     }
+
 }
-
-
-/* ==========================================
-   MODERN PREMIUM 2.1 - HOMEPAGE
-========================================== */
 .premium-home {
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background:
-        radial-gradient(ellipse at 80% 8%, rgba(33, 112, 183, .20), transparent 38%),
+    background: radial-gradient(ellipse at 80% 8%, rgba(33, 112, 183, .20), transparent 38%),
         radial-gradient(ellipse at 10% 55%, rgba(19, 74, 135, .17), transparent 42%),
         radial-gradient(ellipse at 85% 92%, rgba(26, 91, 154, .18), transparent 42%),
         #07111f;
 }
-.premium-home section { position: relative; background: transparent; border: 0; }
+
+.premium-home section {
+    position: relative;
+    background: transparent;
+    border: 0;
+}
+
 .premium-home .section-kicker, .premium-home .hero-label {
-    display: block; color: #55b8ff; font-size: 12px;
-    font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+    display: block;
+    color: #55b8ff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
-.premium-home h2 { font-weight: 800; line-height: 1.12; }
-.premium-home h2 span { color: #55b8ff; }
-.premium-home .hero {
-    min-height: 76vh; padding: 90px 8% 100px;
-    display: flex; justify-content: center; align-items: center;
-    text-align: center;
+
+.premium-home h2 {
+    font-weight: 800;
+    line-height: 1.12;
 }
-.hero-content { position: relative; z-index: 1; max-width: 1000px; animation: heroAppear .9s ease both; }
-.premium-home .hero-label { margin-bottom: 24px; }
-.premium-home .hero h2 {
-    font-size: clamp(42px, 5.5vw, 78px); letter-spacing: -1.5px;
-    margin-bottom: 26px;
+
+.premium-home h2 span {
+    color: #55b8ff;
 }
-.premium-home .hero p {
-    max-width: 580px; margin: 0 auto 35px; color: #a9bfd3; font-size: 17px;
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    animation: heroAppear .9s ease both;
 }
+
+.premium-home .hero-label {
+    margin-bottom: 24px;
+}
+
 .premium-home .button {
-    position: relative; display: inline-block; overflow: hidden;
-    border-radius: 8px; padding: 16px 34px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 8px;
+    padding: 16px 34px;
     transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
 }
-.premium-home .button:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(85,184,255,.25); }
+
+.premium-home .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(85,184,255,.25);
+}
+
 .hero-scroll {
-    position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 10px;
-    color: #7394b3; font-size: 10px; letter-spacing: 3px;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #7394b3;
+    font-size: 10px;
+    letter-spacing: 3px;
 }
-.scroll-line { display: block; width: 1px; height: 40px; background: linear-gradient(#55b8ff, transparent); animation: scrollPulse 2s infinite; }
-.premium-home .services { padding: 85px 8% 100px; text-align: center; }
-.section-heading { margin-bottom: 48px; }
-.premium-home .services h2 { font-size: clamp(32px, 4vw, 50px); letter-spacing: -1px; margin: 14px 0; }
-.section-heading p { color: #a9bfd3; font-size: 16px; }
-.premium-home .service-container {
-    display: grid; grid-template-columns: repeat(3, minmax(0,1fr));
-    gap: 24px; max-width: 1200px; margin: auto;
+
+.scroll-line {
+    display: block;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(#55b8ff, transparent);
+    animation: scrollPulse 2s infinite;
 }
-.premium-home .service {
-    position: relative; overflow: hidden; min-width: 0;
-    padding: 38px 28px; text-align: left;
-    background: rgba(85,184,255,.025);
-    border: 1px solid rgba(85,184,255,.09);
-    border-top: 1px solid rgba(85,184,255,.35);
-    border-radius: 18px; box-shadow: none;
-    transition: transform .4s ease, background .4s ease, border-color .4s ease, box-shadow .4s ease;
+
+.section-heading {
+    margin-bottom: 48px;
 }
+
+.section-heading p {
+    color: #a9bfd3;
+    font-size: 16px;
+}
+
 .premium-home .service::before {
-    content: ''; position: absolute; inset: 0;
+    content: "";
+    position: absolute;
+    inset: 0;
     background: radial-gradient(circle at 50% 0%, rgba(85,184,255,.17), transparent 72%);
-    opacity: 0; pointer-events: none; transition: opacity .4s ease;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease;
 }
-.premium-home .service:hover {
-    transform: translateY(-9px); background: rgba(85,184,255,.065);
-    border-color: rgba(85,184,255,.48); box-shadow: 0 18px 40px rgba(0,0,0,.15);
+
+.premium-home .service:hover::before {
+    opacity: 1;
 }
-.premium-home .service:hover::before { opacity: 1; }
-.premium-home .service > * { position: relative; z-index: 1; }
-.service-number { display: block; margin-bottom: 27px; color: #55b8ff; font-size: 14px; letter-spacing: 2px; transition: transform .4s ease, color .4s ease; }
-.premium-home .service:hover .service-number { transform: translateX(10px); color: #fff; }
-.premium-home .service h3 { font-size: 26px; margin-bottom: 14px; transition: color .3s ease; }
-.premium-home .service:hover h3 { color: #55b8ff; }
-.premium-home .service p { color: #a9bfd3; font-size: 16px; min-height: 76px; margin-bottom: 14px; }
-.premium-home .service strong { display: inline-block; color: #55b8ff; font-size: 22px; }
-.premium-home .about-preview { max-width: 950px; margin: auto; padding: 110px 30px; text-align: center; }
-.premium-home .about-preview h2 { margin: 20px 0 25px; font-size: clamp(32px,4vw,50px); letter-spacing: -1px; }
-.premium-home .about-preview p { max-width: 720px; margin: 0 auto 32px; color: #a9bfd3; font-size: 18px; line-height: 1.85; }
-.premium-home .about-link { display: inline-flex; align-items: center; gap: 14px; color: #55b8ff; text-decoration: none; font-weight: 700; font-size: 13px; letter-spacing: 2px; transition: gap .3s ease; }
-.premium-home .about-link:hover { gap: 22px; }
-.premium-home .about-link span { display: inline-block; font-size: 22px; transition: transform .3s ease; }
-.premium-home .about-link:hover span { transform: translate(4px,-4px); }
-.premium-home .reservation { padding: 115px 20px 135px; text-align: center; }
+
+.premium-home .service > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-number {
+    display: block;
+    margin-bottom: 27px;
+    color: #55b8ff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: transform .4s ease, color .4s ease;
+}
+
+.premium-home .service:hover .service-number {
+    transform: translateX(10px);
+    color: #fff;
+}
+
+.premium-home .service h3 {
+    font-size: 26px;
+    margin-bottom: 14px;
+    transition: color .3s ease;
+}
+
+.premium-home .service:hover h3 {
+    color: #55b8ff;
+}
+
+.premium-home .service p {
+    color: #a9bfd3;
+    font-size: 16px;
+    min-height: 76px;
+    margin-bottom: 14px;
+}
+
+.premium-home .service strong {
+    display: inline-block;
+    color: #55b8ff;
+    font-size: 22px;
+}
+
+.premium-home .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: #55b8ff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: gap .3s ease;
+}
+
+.premium-home .about-link:hover {
+    gap: 22px;
+}
+
+.premium-home .about-link span {
+    display: inline-block;
+    font-size: 22px;
+    transition: transform .3s ease;
+}
+
+.premium-home .about-link:hover span {
+    transform: translate(4px,-4px);
+}
+
 .premium-home .reservation::before {
-    content: ''; position: absolute; width: min(650px,100%); height: 350px;
-    left: 50%; top: 50%; transform: translate(-50%,-50%);
+    content: "";
+    position: absolute;
+    width: min(650px,100%);
+    height: 350px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
     background: radial-gradient(ellipse,rgba(45,130,220,.13),transparent 70%);
     pointer-events: none;
 }
-.premium-home .reservation > * { position: relative; z-index: 1; }
-.premium-home .reservation h2 { max-width: 1000px; margin: 20px auto 22px; font-size: clamp(32px,4vw,50px); letter-spacing: -1px; }
-.premium-home .reservation p { color: #a9bfd3; font-size: 17px; margin-bottom: 34px; }
+
+.premium-home .reservation > * {
+    position: relative;
+    z-index: 1;
+}
+
 @keyframes heroAppear { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+
 @keyframes scrollPulse { 0%,100% { opacity: .35; transform: scaleY(.7); } 50% { opacity: 1; transform: scaleY(1); } }
-/* Scroll animation works when reveal classes are added by JS. */
-.premium-home .reveal-ready { opacity: 0; transform: translateY(32px); transition: opacity .8s ease, transform .8s ease; }
-.premium-home .reveal-ready.visible { opacity: 1; transform: translateY(0); }
-.premium-home .service.reveal-ready:nth-child(2) { transition-delay: .12s; }
-.premium-home .service.reveal-ready:nth-child(3) { transition-delay: .24s; }
+
+.premium-home .reveal-ready {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.premium-home .reveal-ready.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.premium-home .service.reveal-ready:nth-child(2) {
+    transition-delay: .12s;
+}
+
+.premium-home .service.reveal-ready:nth-child(3) {
+    transition-delay: .24s;
+}
+
 @media (max-width: 900px) {
-    .premium-home .service-container { grid-template-columns: 1fr; max-width: 620px; gap: 16px; }
-    .premium-home .service p { min-height: auto; }
-    .premium-home .hero { min-height: 72vh; }
+    .premium-home .service-container {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        gap: 16px;
+    }
+
+    .premium-home .service p {
+        min-height: auto;
+    }
+
 }
 @media (max-width: 600px) {
-    .premium-home .hero { min-height: 72svh; padding: 85px 22px 90px; }
-    .premium-home .hero h2 { font-size: clamp(35px,9vw,48px); letter-spacing: -1px; }
-    .premium-home .hero-label, .premium-home .section-kicker { font-size: 10px; letter-spacing: 2px; }
-    .premium-home .hero p { font-size: 16px; }
-    .premium-home .services { padding: 70px 22px; }
-    .premium-home .service { padding: 30px 24px; }
-    .premium-home .about-preview { padding: 85px 22px; }
-    .premium-home .about-preview p { font-size: 16px; line-height: 1.8; }
-    .premium-home .reservation { padding: 95px 22px 110px; }
-    .premium-home .reservation p { font-size: 16px; }
+    .premium-home .hero-label, .premium-home .section-kicker {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .premium-home .hero p {
+        font-size: 16px;
+    }
+
+    .premium-home .service {
+        padding: 30px 24px;
+    }
+
+    .premium-home .about-preview p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .premium-home .reservation p {
+        font-size: 16px;
+    }
+
 }
 @media (prefers-reduced-motion: reduce) {
     .premium-home *, .premium-home *::before, .premium-home *::after {
-        animation: none !important; transition: none !important; scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
-    .premium-home .reveal-ready { opacity: 1; transform: none; }
-}
 
-/* ==================================================
-   HOMEPAGE 2.2 — ASYMMETRIC MODERN PREMIUM
-   Keeps navbar, gallery, about page and booking styles intact.
-================================================== */
+    .premium-home .reveal-ready {
+        opacity: 1;
+        transform: none;
+    }
+
+}
 .premium-home .hero {
+    justify-content: center;
     min-height: 76vh;
     padding: 95px 8%;
     display: grid;
@@ -1662,62 +1345,286 @@ footer p:first-child {
     gap: 38px;
     text-align: left;
 }
-.premium-home .hero-content { max-width: 720px; text-align: left; }
-.premium-home .hero h2 { font-size: clamp(40px,5vw,74px); line-height: 1.13; letter-spacing: -2px; }
-.premium-home .hero p { margin: 0 0 35px; max-width: 500px; font-size: 17px; }
-.hero-visual { position: relative; width: 100%; max-width: 480px; aspect-ratio: 1; margin: auto; display: grid; place-items: center; }
-.hero-glow { position: absolute; inset: 12%; border-radius: 50%; background: radial-gradient(circle,rgba(50,145,255,.38),rgba(15,65,130,.13) 45%,transparent 75%); filter: blur(24px); animation: bbGlowPulse 5s ease-in-out infinite; }
-.hero-orbit { position: absolute; border: 1px solid rgba(85,184,255,.2); border-radius: 50%; pointer-events: none; }
-.orbit-one { inset: 10%; animation: bbOrbit 22s linear infinite; }
-.orbit-two { inset: 23%; border-style: dashed; animation: bbOrbit 30s linear infinite reverse; }
-.orbit-one::after { content: ''; position: absolute; top: 12%; left: 14%; width: 9px; height: 9px; background: #55b8ff; border-radius: 50%; box-shadow: 0 0 25px #55b8ff; }
-.hero-visual-text { position: relative; z-index: 2; font-size: clamp(90px,13vw,190px); font-weight: 900; letter-spacing: -12px; color: #fff; text-shadow: 0 0 55px rgba(85,184,255,.35); }
+
+.premium-home .hero-content {
+    max-width: 720px;
+    text-align: left;
+}
+
+.premium-home .hero h2 {
+    margin-bottom: 26px;
+    font-size: clamp(40px,5vw,74px);
+    line-height: 1.13;
+    letter-spacing: -2px;
+}
+
+.premium-home .hero p {
+    color: #a9bfd3;
+    margin: 0 0 35px;
+    max-width: 500px;
+    font-size: 17px;
+}
+
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1;
+    margin: auto;
+    display: grid;
+    place-items: center;
+}
+
+.hero-glow {
+    position: absolute;
+    inset: 12%;
+    border-radius: 50%;
+    background: radial-gradient(circle,rgba(50,145,255,.38),rgba(15,65,130,.13) 45%,transparent 75%);
+    filter: blur(24px);
+    animation: bbGlowPulse 5s ease-in-out infinite;
+}
+
+.hero-orbit {
+    position: absolute;
+    border: 1px solid rgba(85,184,255,.2);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.orbit-one {
+    inset: 10%;
+    animation: bbOrbit 22s linear infinite;
+}
+
+.orbit-two {
+    inset: 23%;
+    border-style: dashed;
+    animation: bbOrbit 30s linear infinite reverse;
+}
+
+.orbit-one::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 14%;
+    width: 9px;
+    height: 9px;
+    background: #55b8ff;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #55b8ff;
+}
+
+.hero-visual-text {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(90px,13vw,190px);
+    font-weight: 900;
+    letter-spacing: -12px;
+    color: #fff;
+    text-shadow: 0 0 55px rgba(85,184,255,.35);
+}
+
 @keyframes bbOrbit { to { transform: rotate(360deg); } }
+
 @keyframes bbGlowPulse { 0%,100% { opacity: .6; transform: scale(.95); } 50% { opacity: 1; transform: scale(1.08); } }
-.premium-home .services { padding: 90px 8% 110px; text-align: left; }
-.premium-home .section-heading { max-width: 1200px; margin: 0 auto 45px; text-align: left; }
-.premium-home .services h2 { font-size: clamp(34px,4vw,52px); }
-.premium-home .service-container { gap: 24px; }
-.premium-home .service { padding: 35px 25px; border-top: 1px solid rgba(85,184,255,.3); }
-.premium-home .service:hover { transform: translateY(-10px); background: rgba(85,184,255,.045); }
-.premium-home .about-preview { max-width: 1250px; margin: 0 auto; padding: 100px 8%; display: grid; grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); align-items: center; gap: 85px; text-align: left; }
-.premium-home .about-image { position: relative; width: 100%; max-width: 400px; aspect-ratio: 4/5; border-radius: 20px; overflow: hidden; box-shadow: 0 25px 70px rgba(0,0,0,.25); }
-.premium-home .about-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .7s ease; }
-.premium-home .about-image:hover img { transform: scale(1.06); }
-.premium-home .about-content { text-align: left; }
-.premium-home .about-preview h2 { font-size: clamp(36px,4.5vw,58px); margin: 20px 0 25px; }
-.premium-home .about-preview p { max-width: 550px; margin: 0 0 30px; font-size: 17px; line-height: 1.8; }
-.premium-home .reservation { padding: 110px 8% 130px; display: flex; align-items: center; justify-content: space-between; gap: 45px; text-align: left; }
-.premium-home .reservation-content { max-width: 760px; text-align: left; }
-.premium-home .reservation h2 { font-size: clamp(36px,4.5vw,58px); margin: 20px 0; }
-.premium-home .reservation p { margin-bottom: 0; }
-.premium-home .reservation-action { flex-shrink: 0; position: relative; z-index: 2; }
+
+.premium-home .services {
+    padding: 90px 8% 110px;
+    text-align: left;
+}
+
+.premium-home .section-heading {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+    text-align: left;
+}
+
+.premium-home .services h2 {
+    letter-spacing: -1px;
+    margin: 14px 0;
+    font-size: clamp(34px,4vw,52px);
+}
+
+.premium-home .service-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    max-width: 1200px;
+    margin: auto;
+    gap: 24px;
+}
+
+.premium-home .service {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    text-align: left;
+    background: rgba(85,184,255,.025);
+    border: 1px solid rgba(85,184,255,.09);
+    border-radius: 18px;
+    box-shadow: none;
+    transition: transform .4s ease, background .4s ease, border-color .4s ease, box-shadow .4s ease;
+    padding: 35px 25px;
+    border-top: 1px solid rgba(85,184,255,.3);
+}
+
+.premium-home .service:hover {
+    border-color: rgba(85,184,255,.48);
+    box-shadow: 0 18px 40px rgba(0,0,0,.15);
+    transform: translateY(-10px);
+    background: rgba(85,184,255,.045);
+}
+
+.premium-home .about-preview {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+    align-items: center;
+    gap: 85px;
+    text-align: left;
+}
+
+.premium-home .about-image {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4/5;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.premium-home .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform .7s ease;
+}
+
+.premium-home .about-image:hover img {
+    transform: scale(1.06);
+}
+
+.premium-home .about-content {
+    text-align: left;
+}
+
+.premium-home .about-preview h2 {
+    letter-spacing: -1px;
+    font-size: clamp(36px,4.5vw,58px);
+    margin: 20px 0 25px;
+}
+
+.premium-home .about-preview p {
+    color: #a9bfd3;
+    max-width: 550px;
+    margin: 0 0 30px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.premium-home .reservation {
+    padding: 110px 8% 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    text-align: left;
+}
+
+.premium-home .reservation-content {
+    max-width: 760px;
+    text-align: left;
+}
+
+.premium-home .reservation h2 {
+    max-width: 1000px;
+    letter-spacing: -1px;
+    font-size: clamp(36px,4.5vw,58px);
+    margin: 20px 0;
+}
+
+.premium-home .reservation p {
+    color: #a9bfd3;
+    font-size: 17px;
+    margin-bottom: 0;
+}
+
+.premium-home .reservation-action {
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
 @media (max-width: 900px) {
-    .premium-home .hero { grid-template-columns: 1fr; padding: 90px 6%; gap: 20px; }
-    .premium-home .hero-visual { max-width: 300px; }
-    .premium-home .about-preview { grid-template-columns: 1fr; gap: 40px; }
-    .premium-home .about-image { max-width: 350px; }
-    .premium-home .reservation { flex-direction: column; align-items: flex-start; }
+    .premium-home .hero {
+        min-height: 72vh;
+        grid-template-columns: 1fr;
+        padding: 90px 6%;
+        gap: 20px;
+    }
+
+    .premium-home .hero-visual {
+        max-width: 300px;
+    }
+
+    .premium-home .about-preview {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .premium-home .about-image {
+        max-width: 350px;
+    }
+
+    .premium-home .reservation {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 }
 @media (max-width: 600px) {
-    .premium-home .hero { padding: 75px 22px; min-height: auto; }
-    .premium-home .hero h2 { font-size: clamp(34px,9vw,48px); }
-    .premium-home .hero-visual { max-width: 240px; }
-    .premium-home .hero-visual-text { font-size: 100px; letter-spacing: -7px; }
-    .premium-home .services { padding: 75px 22px; }
-    .premium-home .about-preview { padding: 80px 22px; }
-    .premium-home .reservation { padding: 90px 22px 110px; }
+    .premium-home .hero {
+        padding: 75px 22px;
+        min-height: auto;
+    }
+
+    .premium-home .hero h2 {
+        letter-spacing: -1px;
+        font-size: clamp(34px,9vw,48px);
+    }
+
+    .premium-home .hero-visual {
+        max-width: 240px;
+    }
+
+    .premium-home .hero-visual-text {
+        font-size: 100px;
+        letter-spacing: -7px;
+    }
+
+    .premium-home .services {
+        padding: 75px 22px;
+    }
+
+    .premium-home .about-preview {
+        padding: 80px 22px;
+    }
+
+    .premium-home .reservation {
+        padding: 90px 22px 110px;
+    }
+
 }
 @media (prefers-reduced-motion: reduce) {
-    .premium-home .hero-glow, .premium-home .hero-orbit { animation: none; }
+    .premium-home .hero-glow, .premium-home .hero-orbit {
+        animation: none;
+    }
+
 }
-
-
-/* ==========================================
-   HOMEPAGE HERO PHOTO - BERNARD BARBER
-   Replaces the previous animated scissors.
-========================================== */
-
 .premium-home .hero .hero-photo {
     position: relative;
     width: 100%;
@@ -1750,27 +1657,25 @@ footer p:first-child {
         max-width: 540px;
         aspect-ratio: 4 / 3;
     }
-}
 
+}
 @media (max-width: 600px) {
     .premium-home .hero .hero-photo {
         max-width: 100%;
         aspect-ratio: 4 / 3;
         border-radius: 15px;
     }
-}
 
+}
 @media (prefers-reduced-motion: reduce) {
     .premium-home .hero-photo .barber-hero-image {
         transition: none;
     }
+
 }
-
-
 .premium-subpage .why-card {
     background: #10233a;
-    transition:
-        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
         border-color 0.5s ease,
         box-shadow 0.6s ease,
         background-color 0.5s ease;
