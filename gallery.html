@@ -1,150 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Bernard Barber</title>
-
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
     <!-- HEADER -->
     <header>
-
         <div class="logo">
             <a href="index.html">
-            <img src="img/logo.png" alt="Bernard Barber Logo">
+                <img src="img/logo.png" alt="Bernard Barber Logo">
             </a>
         </div>
 
         <nav>
             <a href="index.html">Domů</a>
             <a href="about.html">O nás</a>
-            <a href="gallery.html">Galerie</a>
+            <a href="gallery.html" aria-current="page">Galerie</a>
             <a href="reservations.html">Rezervace</a>
         </nav>
-
     </header>
 
-
-    <main>
+    <main class="premium-home">
 
         <!-- GALLERY HERO -->
-        <section class="gallery-hero">
+        <section class="hero">
 
-            <p class="section-label">Naše práce</p>
+            <div class="hero-content">
 
-            <h2>Galerie</h2>
+                <h2>
+                    Galerie<br>
+                    <span>Naše práce</span>
+                </h2>
 
-            <p>
-                Podívejte se na některé z našich střihů, stylování vousů a transformací.
-            </p>
+                <p>
+                    Galerie ukazuje naše dovednosti a kreativitu. Prohlédněte si různé střihy, úpravy vousů a stylizace, které jsme vytvořili pro naše zákazníky.
+                </p>
 
-        </section>
+                <a href="reservations.html" class="button">
+                    BOOKNI SI STŘIH!
+                </a>
 
+            </div>
 
-        <!-- GALLERY -->
-        <section class="gallery-section">
+            <!-- HERO IMAGE -->
+            <div class="hero-visual hero-photo">
 
-            <div class="gallery-grid">
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 1
-                    </div>
-
-                    <h3>Classic Fade</h3>
-                    <p>Haircut</p>
-                </div>
-
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 2
-                    </div>
-
-                    <h3>Modern Cut</h3>
-                    <p>Haircut</p>
-                </div>
-
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 3
-                    </div>
-
-                    <h3>Beard Styling</h3>
-                    <p>Beard</p>
-                </div>
-
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 4
-                    </div>
-
-                    <h3>Skin Fade</h3>
-                    <p>Haircut</p>
-                </div>
-
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 5
-                    </div>
-
-                    <h3>Hair & Beard</h3>
-                    <p>Complete Service</p>
-                </div>
-
-
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        PHOTO 6
-                    </div>
-
-                    <h3>Fresh Style</h3>
-                    <p>Haircut</p>
-                </div>
+                <img
+                    src="img/home_image.jpg"
+                    alt="Profesionální barber vybavení"
+                    class="barber-hero-image"
+                >
 
             </div>
 
         </section>
 
+        <!-- GALLERY -->
+        <section class="gallery-section">
+
+            <div class="section-heading">
+                <span class="section-kicker">BERNARD BARBER</span>
+
+                <h2>
+                    NAŠE <span>GALERIE.</span>
+                </h2>
+
+                <p>Střihy, detaily a výsledky naší práce.</p>
+            </div>
+
+            <div class="gallery-grid">
+
+                <!-- PHOTO 1 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut1.jpg"
+                            alt="Classic Fade"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>CLASSIC FADE</h3>
+                    <p>Haircut</p>
+                </div>
+
+                <!-- PHOTO 2 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut2.jpg"
+                            alt="Modern Cut"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>MODERN CUT</h3>
+                    <p>Haircut</p>
+                </div>
+
+                <!-- PHOTO 3 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut3.jpg"
+                            alt="Beard Styling"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>BEARD STYLING</h3>
+                    <p>Beard</p>
+                </div>
+
+                <!-- PHOTO 4 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut4.jpg"
+                            alt="Skin Fade"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>SKIN FADE</h3>
+                    <p>Haircut</p>
+                </div>
+
+                <!-- PHOTO 5 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut5.jpg"
+                            alt="Hair and Beard"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>HAIR &amp; BEARD</h3>
+                    <p>Complete Service</p>
+                </div>
+
+                <!-- PHOTO 6 -->
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img
+                            src="img/cut6.jpg"
+                            alt="Fresh Style"
+                            loading="lazy"
+                        >
+                    </div>
+                    <h3>FRESH STYLE</h3>
+                    <p>Haircut</p>
+                </div>
+
+            </div>
+        </section>
 
         <!-- RESERVATION CTA -->
         <section class="reservation">
 
-            <h2>Líbilo se vám, co jste viděli?</h2>
+            <div class="reservation-content">
+                <span class="section-kicker">LÍBÍ SE TI NAŠE PRÁCE?</span>
 
-            <p>Rezervujte si čas a získejte svůj nový vzhled.</p>
+                <h2>
+                    TEĎ JSI<br>
+                    <span>NA ŘADĚ TY.</span>
+                </h2>
 
-            <a href="reservations.html" class="button">
-                Bookni si cut!
-            </a>
+                <p>
+                    Vyber si termín a přijď si pro svůj nový styl.
+                </p>
+            </div>
+
+            <div class="reservation-action">
+                <a href="reservations.html" class="button">
+                    BOOKNI SI STŘIH! ↗
+                </a>
+            </div>
 
         </section>
 
     </main>
 
-
     <!-- FOOTER -->
     <footer>
-
         <p>Bernard Barber</p>
         <p>Praha, Česká republika</p>
-
         <p>© 2026 Bernard Barber. All rights reserved.</p>
-
     </footer>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>

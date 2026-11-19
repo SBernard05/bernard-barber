@@ -400,3 +400,4 @@ bookingForm.addEventListener("submit", async (event) => {
         bookingButton.textContent = "Rezervovat";
     }
 });
+

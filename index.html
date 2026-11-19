@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +19,7 @@
 
         <div class="logo">
             <a href="index.html">
-            <img src="img/logo.png" alt="Bernard Barber Logo">
+                <img src="img/logo.png" alt="Bernard Barber Logo">
             </a>
         </div>
 
@@ -33,21 +34,40 @@
 
 
     <!-- MAIN CONTENT -->
-    <main>
+    <main class="premium-home">
 
-        <!-- HERO SECTION -->
+        <!-- HERO -->
         <section class="hero">
 
-            <h2>Ostré střihy.<br>Čistý Styl.</h2>
+            <div class="hero-content">
 
-            <p>
-                Professionalní barber služby s přesností,
-                stylem a citem pro detail.
-            </p>
+                <h2>
+                    OSTRÉ STŘIHY.<br>
+                    <span>ČISTÝ STYL.</span>
+                </h2>
 
-            <a href="reservations.html" class="button">
-                Bookni si střih!
-            </a>
+                <p>
+                    Profesionální barber služby s přesností,
+                    stylem a citem pro detail.
+                    Tvůj styl začíná tady.
+                </p>
+
+                <a href="reservations.html" class="button">
+                    BOOKNI SI STŘIH!
+                </a>
+
+            </div>
+
+            <!-- HERO IMAGE -->
+            <div class="hero-visual hero-photo">
+
+                <img
+                    src="img/home_image.jpg"
+                    alt="Profesionální barber vybavení"
+                    class="barber-hero-image"
+                >
+
+            </div>
 
         </section>
 
@@ -55,59 +75,117 @@
         <!-- SERVICES -->
         <section class="services">
 
-            <h2>Naše služby</h2>
+            <div class="section-heading">
+                <span class="section-kicker">CO NABÍZÍME</span>
+
+                <h2>
+                    NAŠE <span>SLUŽBY.</span>
+                </h2>
+
+                <p>
+                    Precizní práce. Čistý výsledek. Tvůj styl.
+                </p>
+            </div>
 
             <div class="service-container">
 
                 <div class="service">
+                    <span class="service-number">01 /</span>
                     <h3>Haircut</h3>
-                    <p>Professionalní střih přizpůsobený vašemu stylu.</p>
+                    <p>
+                        Profesionální střih přizpůsobený tvému stylu.
+                    </p>
                     <strong>300 CZK</strong>
                 </div>
 
                 <div class="service">
+                    <span class="service-number">02 /</span>
                     <h3>Beard Trim</h3>
-                    <p>Precizní střih a stylizace vousů.</p>
+                    <p>
+                        Precizní úprava vousů do posledního detailu.
+                    </p>
                     <strong>200 CZK</strong>
                 </div>
 
                 <div class="service">
+                    <span class="service-number">03 /</span>
                     <h3>Hair & Beard</h3>
-                    <p>Kompletní barberovský zážitek.</p>
+                    <p>
+                        Kompletní střih a úprava vousů v jednom.
+                    </p>
                     <strong>400 CZK</strong>
                 </div>
+
+            </div>
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="about-preview">
+
+            <div class="about-image">
+                <img
+                    src="img/tool.png"
+                    alt="Bernard Barber"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="about-content">
+
+                <span class="section-kicker">
+                    NĚCO O NÁS
+                </span>
+
+                <h2>
+                    VÍCE NEŽ<br>
+                    <span>JEN STŘIH.</span>
+                </h2>
+
+                <p>
+                    V Bernard Barber spojujeme tradiční
+                    barbering s moderním stylem.
+                    Každý detail má svůj význam
+                    a každý střih je příležitostí
+                    vytvořit něco jedinečného.
+                </p>
+
+                <a href="about.html" class="about-link">
+                    POZNEJ BERNARD BARBER <span>↗</span>
+                </a>
 
             </div>
 
         </section>
 
 
-        <!-- ABOUT PREVIEW -->
-        <section class="about-preview">
-
-            <h2>Více než jen střih</h2>
-
-            <p>
-                V Bernard Barber spojujeme tradiční barbering
-                s moderním stylem. Náš cíl je udělat každou návštěvu 
-                příjemnou s profesionálním přístupem a výsledkem.
-            </p>
-
-            <a href="about.html">Dozvědět se více →</a>
-
-        </section>
-
-
-        <!-- RESERVATION CTA -->
+        <!-- RESERVATION -->
         <section class="reservation">
 
-            <h2>Připravený na Fresh Cut?</h2>
+            <div class="reservation-content">
 
-            <p>Bookni si svůj střih dnes!</p>
+                <span class="section-kicker">
+                    TVŮJ DALŠÍ STŘIH
+                </span>
 
-            <a href="reservations.html" class="button">
-                Rezervovat cut!
-            </a>
+                <h2>
+                    PŘIPRAVENÝ NA<br>
+                    <span>FRESH CUT?</span>
+                </h2>
+
+                <p>
+                    Nový střih. Nový pocit. Stejný styl.
+                </p>
+
+            </div>
+
+            <div class="reservation-action">
+
+                <a href="reservations.html" class="button">
+                    REZERVOVAT CUT! ↗
+                </a>
+
+            </div>
 
         </section>
 
@@ -127,5 +205,4 @@
     <script src="script.js"></script>
 
 </body>
-
 </html>

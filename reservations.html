@@ -1,27 +1,37 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Bernard Barber</title>
 
-    <link rel="icon" type="image/png" href="img/favicon.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon"
+          type="image/png"
+          href="img/favicon.png">
+
+    <link rel="stylesheet"
+          href="css/style.css">
 
     <!-- Cloudflare Turnstile -->
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+    <script
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+        async defer>
+    </script>
 </head>
 
 <body>
 
     <!-- HEADER -->
     <header>
+
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo.png" alt="Bernard Barber Logo">
+                <img src="img/logo.png"
+                     alt="Bernard Barber Logo">
             </a>
         </div>
 
@@ -29,104 +39,148 @@
             <a href="index.html">Domů</a>
             <a href="about.html">O nás</a>
             <a href="gallery.html">Galerie</a>
-            <a href="reservations.html">Rezervace</a>
+            <a href="reservations.html"
+               aria-current="page">Rezervace</a>
         </nav>
+
     </header>
 
-    <main>
 
-        <!-- RESERVATION HERO -->
-        <section class="reservation-hero">
+    <!-- MAIN CONTENT -->
+    <main class="premium-home premium-subpage reservations-page">
 
-            <p class="section-label">Bookni si návštěvu</p>
+        
 
-            <h2>Rezervace</h2>
 
-            <p>
-                Vyberte si svou službu a upřednostněný čas.
-                Těšíme se na vaši návštěvu.
-            </p>
-
-        </section>
-
-        <!-- BOOKING SECTION -->
+        <!-- BOOKING -->
         <section class="booking-section">
 
             <div class="booking-container">
 
-                <!-- LEFT SIDE -->
+                <!-- LEFT COLUMN -->
                 <div class="booking-info">
 
-                    <p class="section-label">Bernard Barber</p>
-
-                    <h2>Bookni si cut!</h2>
+                    <h2>
+                        REZERVUJ <br>
+                        <span>SI TERMÍN</span>
+                    </h2>
 
                     <p class="booking-description">
-                        Vyplňte formulář a zvolte službu,
-                        která vám nejlépe vyhovuje.
+                        Precizní střih, pohodová atmosféra
+                        a fresh výsledek. Vyber si svůj termín
+                        a nech zbytek na nás.
                     </p>
 
+
+                    <!-- OPENING HOURS -->
                     <div class="info-item">
-                        <h3>Otevírací hodiny</h3>
 
-                        <p>Středa</p>
-                        <strong>08:00 – 10:00</strong>
+                        <h3>OTEVÍRACÍ DOBA</h3>
 
-                        <p>Čtvrtek – Pátek</p>
-                        <strong>16:00 – 19:00</strong>
+                        <div class="hours-row">
+                            <span>Středa</span>
+                            <strong>08:00 – 10:00</strong>
+                        </div>
 
-                        <p>Sobota</p>
-                        <strong>10:00 – 14:00</strong>
+                        <div class="hours-row">
+                            <span>Čtvrtek – Pátek</span>
+                            <strong>16:00 – 19:00</strong>
+                        </div>
+
+                        <div class="hours-row">
+                            <span>Sobota</span>
+                            <strong>10:00 – 14:00</strong>
+                        </div>
+
                     </div>
 
+
+                    <!-- LOCATION -->
                     <div class="info-item">
-                        <h3>Lokace</h3>
+
+                        <h3>KDE NÁS NAJDEŠ</h3>
+
                         <p>Jeneč, Česká republika</p>
+
                     </div>
 
-                    <div class="info-item">
-                        <h3>Kontakt</h3>
 
-                        <p>+420 777 543 371</p>
-                        <p>bernardbarber7@gmail.com</p>
+                    <!-- CONTACT -->
+                    <div class="info-item">
+
+                        <h3>KONTAKT</h3>
+
+                        <p>
+                            <a href="tel:+420777543371">
+                                +420 777 543 371
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href="mailto:bernardbarber7@gmail.com">
+                                bernardbarber7@gmail.com
+                            </a>
+                        </p>
+
                     </div>
 
                 </div>
 
-                <!-- RIGHT SIDE - FORM -->
+
+                <!-- RIGHT COLUMN -->
                 <div class="booking-form-container">
 
-                    <form id="reservationForm" class="booking-form">
+                    <div class="booking-form-heading">
+
+                        <span class="section-kicker">
+                            ONLINE REZERVACE
+                        </span><br> 
+
+                    </div>
+
+
+                    <!-- RESERVATION FORM -->
+                    <form
+                        id="reservationForm"
+                        class="booking-form"
+                    >
 
                         <!-- NAME -->
                         <div class="form-group">
 
-                            <label for="name">Jméno *</label>
+                            <label for="name">
+                                JMÉNO *
+                            </label>
 
                             <input
                                 type="text"
                                 id="name"
                                 name="name"
-                                placeholder="Vaše jméno"
+                                placeholder="Tvoje jméno"
                                 minlength="2"
                                 maxlength="100"
+                                autocomplete="name"
                                 required
                             >
 
                         </div>
 
-                        <!-- PHONE + EMAIL -->
+
+                        <!-- PHONE AND EMAIL -->
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="phone">Telefon *</label>
+                                <label for="phone">
+                                    TELEFON *
+                                </label>
 
                                 <input
                                     type="tel"
                                     id="phone"
                                     name="phone"
                                     placeholder="+420 123 456 789"
+                                    autocomplete="tel"
                                     required
                                 >
 
@@ -134,13 +188,16 @@
 
                             <div class="form-group">
 
-                                <label for="email">Email *</label>
+                                <label for="email">
+                                    E-MAIL *
+                                </label>
 
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    placeholder="your@email.com"
+                                    placeholder="tvuj@email.cz"
+                                    autocomplete="email"
                                     required
                                 >
 
@@ -148,39 +205,52 @@
 
                         </div>
 
+
                         <!-- SERVICE -->
                         <div class="form-group">
 
-                            <label for="service">Služba *</label>
+                            <label for="service">
+                                SLUŽBA *
+                            </label>
 
-                            <select id="service" name="service" required>
+                            <select
+                                id="service"
+                                name="service"
+                                required
+                            >
 
-                                <option value="" disabled selected>
-                                    Vyberte službu
+                                <option
+                                    value=""
+                                    disabled
+                                    selected>
+                                    Vyber službu
                                 </option>
 
                                 <option value="haircut">
-                                    Haircut
+                                    Haircut – 300 Kč
                                 </option>
 
                                 <option value="beard">
-                                    Beard Trim
+                                    Beard Trim – 200 Kč
                                 </option>
 
                                 <option value="hair-beard">
-                                    Hair &amp; Beard
+                                    Hair &amp; Beard – 400 Kč
                                 </option>
 
                             </select>
 
                         </div>
 
-                        <!-- DATE + TIME -->
+
+                        <!-- DATE AND TIME -->
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="date">Datum *</label>
+                                <label for="date">
+                                    DATUM *
+                                </label>
 
                                 <input
                                     type="date"
@@ -193,7 +263,9 @@
 
                             <div class="form-group">
 
-                                <label for="time">Čas *</label>
+                                <label for="time">
+                                    ČAS *
+                                </label>
 
                                 <select
                                     id="time"
@@ -202,7 +274,7 @@
                                     disabled
                                 >
                                     <option value="">
-                                        Nejdřív vyberte den
+                                        Nejdřív vyber den
                                     </option>
                                 </select>
 
@@ -210,30 +282,35 @@
 
                         </div>
 
+
                         <!-- NOTE -->
                         <div class="form-group">
 
-                            <label for="note">Poznámka *</label>
+                            <label for="note">
+                                POZNÁMKA (NEPOVINNÉ)
+                            </label>
 
                             <textarea
                                 id="note"
                                 name="note"
-                                rows="5"
+                                rows="4"
                                 maxlength="1000"
-                                placeholder="Něco co by jsme měli vědět?"
+                                placeholder="Je něco, co bychom měli vědět?"
                             ></textarea>
 
                         </div>
 
-                        <!-- Invisible Cloudflare Turnstile -->
+
+                        <!-- TURNSTILE -->
                         <div id="turnstile-container"></div>
+
 
                         <!-- SUBMIT -->
                         <button
                             type="submit"
                             class="booking-button"
                         >
-                            Rezervovat
+                            REZERVOVAT TERMÍN ↗
                         </button>
 
                     </form>
@@ -246,19 +323,29 @@
 
     </main>
 
+
     <!-- FOOTER -->
     <footer>
 
         <p>Bernard Barber</p>
-
         <p>Praha, Česká republika</p>
 
-        <p>© 2026 Bernard Barber. All rights reserved.</p>
+        <p>
+            © 2026 Bernard Barber. All rights reserved.
+        </p>
 
     </footer>
 
+
+    <!-- NOTIFICATIONS -->
+    <div
+        id="toast-container"
+        aria-live="polite">
+    </div>
+
+
+    <!-- JAVASCRIPT -->
     <script src="./js/script.js"></script>
-    <div id="toast-container" aria-live="polite"></div>
 
 </body>
 </html>
