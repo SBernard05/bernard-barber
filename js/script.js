@@ -8,9 +8,7 @@ const TURNSTILE_SITE_KEY =
 const dateInput = document.getElementById("date");
 const timeSelect = document.getElementById("time");
 const bookingForm = document.querySelector(".booking-form");
-const bookingButton = bookingForm.querySelector(
-    'button[type="submit"]'
-);
+
 // --------------------------------------
 // TOAST NOTIFICATIONS
 // --------------------------------------
